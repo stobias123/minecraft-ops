@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  spigot-svc
+spec:
+  selector:
+    app:  spigot
+  type: ClusterIP
+  ports:
+  - name: debug
+    port: 5005
+    targetPort: 5005
+  - name: minecraft
+    port:  25565
+    targetPort:  25565
